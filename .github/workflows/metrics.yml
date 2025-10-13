@@ -2,8 +2,62 @@ name: Generate GitHub Metrics
 
 on:
   schedule:
-    - cron: "30 5 * * *"   # daily at 05:30 UTC
+    - cron: "30 5 * * *" # daily at 05:30 UTC
   workflow_dispatch:
 
-jo
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Generate – base overview
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.base.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: alvaropaco
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: UTC
+
+      - name: Generate – languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: alvaropaco
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            html, css
+          plugin_languages_limit: 8
+
+      - name: Generate – repositories
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: alvaropaco
+          plugin_repositories: yes
+          plugin_repositories_affiliations: owner, collaborator, organization_member
+
+      - name: Generate – achievements
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: alvaropaco
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes
+
+      - name: Generate – habits
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.habits.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: alvaropaco
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
