@@ -22,6 +22,61 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: UTC
 
+      - name: Full-year calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: Contributors with contributions count
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.contributors.contributions.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          template: repository
+          repo: metrics
+          plugin_contributors: yes
+          plugin_contributors_contributions: yes
+
+      - name: Contributors and sponsors
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.people.repository.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          template: repository
+          repo: metrics
+          plugin_people: yes
+          plugin_people_types: contributors, stargazers, watchers, sponsors
+
+      - name: Compact display
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.achievements.compact.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_only: >-
+            polyglot, stargazer, sponsor, deployer, member, maintainer, developer,
+            scripter, packager, explorer, infographile, manager
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: X
+
+      - name: Top answers from stackoverflow
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.stackoverflow.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stackoverflow: yes
+          plugin_stackoverflow_user: 1
+          plugin_stackoverflow_sections: answers-top
+          plugin_stackoverflow_limit: 2
+
       - name: Generate – languages
         uses: lowlighter/metrics@latest
         with:
