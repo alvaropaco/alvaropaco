@@ -1,0 +1,9 @@
+name: Generate GitHub Metrics
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # daily at 05:30 UTC
+  workflow_dispatch:
+
+jo
+
