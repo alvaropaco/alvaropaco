@@ -7,7 +7,7 @@ I ship production‑ready software, lead high‑impact teams, and design data‑
 * 🔭 Current focus: **AI agents**, **RAG systems**, **DX tooling**
 * 🧠 Interests: distributed systems, human‑in‑the‑loop ML, cost/perf engineering
 * 💬 Ask me about: product strategy, ML platforms, React/Next.js, Node, Python
-* 🌍 Based in: <CITY/COUNTRY> • open to remote/async
+* 🌍 Based in: Sao Paulo, Brazil • open to remote/async
 * ✉️ Reach me: [Mail](mailto:alvaropaconeto@gmail.com) | [LinkedIn](https://www.linkedin.com/in/alvaropaco/)
 
 ---
