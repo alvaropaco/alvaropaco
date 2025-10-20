@@ -8,7 +8,7 @@ I ship production‑ready software, lead high‑impact teams, and design data‑
 * 🧠 Interests: distributed systems, human‑in‑the‑loop ML, cost/perf engineering
 * 💬 Ask me about: product strategy, ML platforms, React/Next.js, Node, Python
 * 🌍 Based in: <CITY/COUNTRY> • open to remote/async
-* ✉️ Reach me: [email@domain.com](mailto:email@domain.com) | <LinkedIn/URL>
+* ✉️ Reach me: [Mail](mailto:alvaropaconeto@gmail.com) | [LinkedIn](https://www.linkedin.com/in/alvaropaco/)
 
 ---
 
@@ -31,7 +31,7 @@ I ship production‑ready software, lead high‑impact teams, and design data‑
 
 ## 📊 GitHub metrics (powered by `lowlighter/metrics`)
 
-> **Automatic, daily‑updated SVGs** rendered by a GitHub Actions workflow (see the workflow below). Replace `<USER>` with your GitHub username.
+> **Automatic, daily‑updated SVGs**.
 
 ### Activity & overview
 
